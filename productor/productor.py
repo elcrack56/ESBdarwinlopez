@@ -12,14 +12,16 @@ print("Bienvenido al sistema de reporte de incidentes de esta Universidad.")
 print("Selecciona el tipo de incidente:")
 print("1. Arquitectura (infraestructura)")
 print("2. Sistemas (tecnología)")
-opcion = input("Opción (1 o 2): ")
+opcion = input("Escribe el numero de cualquier opcion que te muestra el menu: ")
 
 if opcion == "1":
     tipo = "Arquitectura"
     descripcion = input("Describe el problema de infraestructura: ")
+    prioridad = input("Prioridad del incidente (Alta, Media, Baja): ")
 elif opcion == "2":
     tipo = "Sistemas"
     descripcion = input("Describe el problema del sistema: ")
+    prioridad = input("Prioridad del incidente (Alta, Media, Baja): ")
 else:
     print("Opción inválida.")
     exit()
@@ -27,7 +29,7 @@ else:
 incident_message = {
     "tipo": tipo,
     "descripcion": descripcion,
-    "prioridad": "Media",
+    "prioridad": prioridad,
     "reportado_por": input("Usuario que reporta: "),
     "fecha": datetime.now().isoformat()
 }
