@@ -33,7 +33,8 @@ elif opcion == "4":
     descripcion = input("Describe la emergencia de seguridad: ")
     prioridad = input("Prioridad del incidente (Alta, Media, Baja): ")
 else:
-    print("Opción inválida.")
+    print("Opción inválida, ingrese una opción válida.")
+    print("Saliendo del sistema.")
     exit()
 
 incident_message = {
