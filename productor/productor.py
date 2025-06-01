@@ -12,6 +12,8 @@ print("Bienvenido al sistema de reporte de incidentes de esta Universidad.")
 print("Selecciona el tipo de incidente:")
 print("1. Arquitectura (infraestructura)")
 print("2. Sistemas (tecnología)")
+print("3. Emergencia medicas (salud)")
+print("4. Emergencia de Seguridad (Control de acceso, Personal de seguridad)")
 opcion = input("Escribe el numero de cualquier opcion que te muestra el menu: ")
 
 if opcion == "1":
@@ -21,6 +23,14 @@ if opcion == "1":
 elif opcion == "2":
     tipo = "Sistemas"
     descripcion = input("Describe el problema del sistema: ")
+    prioridad = input("Prioridad del incidente (Alta, Media, Baja): ")
+elif opcion == "3":
+    tipo = "Emergencia Medica"
+    descripcion = input("Describe la emergencia médica: ")
+    prioridad = input("Prioridad del incidente (Alta, Media, Baja): ")
+elif opcion == "4":
+    tipo = "Emergencia de Seguridad"
+    descripcion = input("Describe la emergencia de seguridad: ")
     prioridad = input("Prioridad del incidente (Alta, Media, Baja): ")
 else:
     print("Opción inválida.")
