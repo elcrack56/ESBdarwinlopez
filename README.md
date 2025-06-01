@@ -10,7 +10,8 @@ En una universidad, los estudiantes, docentes o personal administrativo pueden r
 
 - Problemas con infraestructura (luces dañadas, puertas rotas, etc.)
 - Fallos en sistemas informáticos (plataforma virtual caída, problemas de acceso)
-- Emergencias médicas o de seguridad
+- Emergencias médicas
+- Emergencias de Seguridad
 
 Para manejar estos reportes de forma eficiente y desacoplada, se utiliza un Enterprise Service Bus (ESB) con Azure Service Bus. Así, los sistemas que generan los reportes (por ejemplo, una app móvil o un portal web) pueden enviar mensajes a una cola, y otros sistemas (como el sistema de gestión de mantenimiento o seguridad) pueden consumirlos y actuar en consecuencia.
 

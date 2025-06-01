@@ -37,7 +37,7 @@ else:
     print("Saliendo del sistema.")
     exit()
 
-incident_message = {
+ESB_message = {
     "tipo": tipo,
     "descripcion": descripcion,
     "prioridad": prioridad,
@@ -48,7 +48,7 @@ incident_message = {
 with ServiceBusClient.from_connection_string(connection_str) as client:
     sender = client.get_queue_sender(queue_name=queue_name)
     with sender:
-        message = ServiceBusMessage(json.dumps(incident_message))
+        message = ServiceBusMessage(json.dumps(ESB_message))
         sender.send_messages(message)
         print("✅ Mensaje enviado correctamente.")
 
